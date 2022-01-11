@@ -1,10 +1,10 @@
-class CgAccordeon {
+class CgAccordion {
   constructor(selector, options) {
     let defaultOptions = {
-      activeClass: 'accordeon--active',
-      dataAttribute: 'accordeon',
-      topClass: 'accordeon__top',
-      bodyClass: 'accordeon__body',
+      activeClass: 'accordion--active',
+      dataAttribute: 'accordion',
+      topClass: 'accordion__top',
+      bodyClass: 'accordion__body',
       speed: 300,
     };
 
@@ -33,12 +33,12 @@ class CgAccordeon {
   open($element) {
     if (
       document.querySelector(
-        `.${this.options.activeClass}[data-${this.options.dataAttribute}=${$element.dataset.accordeon}]`
+        `.${this.options.activeClass}[data-${this.options.dataAttribute}=${$element.dataset.accordion}]`
       )
     ) {
       this.close(
         document.querySelector(
-          `.${this.options.activeClass}[data-${this.options.dataAttribute}=${$element.dataset.accordeon}]`
+          `.${this.options.activeClass}[data-${this.options.dataAttribute}=${$element.dataset.accordion}]`
         )
       );
     }

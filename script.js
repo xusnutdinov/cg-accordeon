@@ -1,3 +1,3 @@
-const accordeon = new CgAccordeon('.accordeon', {
+const accordion = new CgAccordion('.accordion', {
   speed: 300,
 });

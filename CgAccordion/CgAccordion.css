@@ -1,4 +1,4 @@
-.accordeon__top {
+.accordion__top {
   padding: 15px;
   border: 1px solid #ccc;
   position: relative;
@@ -9,7 +9,7 @@
   border-radius: 4px;
 }
 
-.accordeon__top-icon {
+.accordion__top-icon {
   box-sizing: border-box;
   transition: transform 0.3s;
   width: 24px;
@@ -17,7 +17,7 @@
   fill: #000;
 }
 
-.accordeon__body {
+.accordion__body {
   --speed: 0.3s;
 
   padding: 0 15px;
@@ -27,11 +27,11 @@
   transition: max-height var(--speed), padding var(--speed);
 }
 
-.accordeon--active .accordeon__top-icon {
+.accordion--active .accordion__top-icon {
   transform: rotate(180deg);
 }
 
-.accordeon--active .accordeon__body {
+.accordion--active .accordion__body {
   padding: 15px;
   max-height: unset;
 }

@@ -1,4 +1,4 @@
-.accordeon {
+.accordion {
   &__top {
     padding: 15px;
     border: 1px solid #000;
@@ -28,12 +28,12 @@
   }
 }
 
-.accordeon--active {
-  .accordeon__top-icon {
+.accordion--active {
+  .accordion__top-icon {
     transform: rotate(180deg);
   }
 
-  .accordeon__body {
+  .accordion__body {
     padding: 15px;
     height: unset;
   }
