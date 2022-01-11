@@ -5,6 +5,7 @@ class CgAccordion {
       dataAttribute: 'accordion',
       topClass: 'accordion__top',
       bodyClass: 'accordion__body',
+      syncGroup: true,
       speed: 300,
     };
 
@@ -31,16 +32,18 @@ class CgAccordion {
   }
 
   open($element) {
-    if (
-      document.querySelector(
-        `.${this.options.activeClass}[data-${this.options.dataAttribute}=${$element.dataset.accordion}]`
-      )
-    ) {
-      this.close(
+    if (this.options.syncGroup) {
+      if (
         document.querySelector(
           `.${this.options.activeClass}[data-${this.options.dataAttribute}=${$element.dataset.accordion}]`
         )
-      );
+      ) {
+        this.close(
+          document.querySelector(
+            `.${this.options.activeClass}[data-${this.options.dataAttribute}=${$element.dataset.accordion}]`
+          )
+        );
+      }
     }
 
     const $elementBody = $element.querySelector(`.${this.options.bodyClass}`);
