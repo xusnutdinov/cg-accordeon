@@ -1,0 +1,37 @@
+.accordeon__top {
+  padding: 15px;
+  border: 1px solid #ccc;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+}
+
+.accordeon__top-icon {
+  box-sizing: border-box;
+  transition: transform 0.3s;
+  width: 24px;
+  height: 24px;
+  fill: #000;
+}
+
+.accordeon__body {
+  --speed: 0.3s;
+
+  padding: 0 15px;
+  max-height: 0;
+  will-change: max-height;
+  overflow: hidden;
+  transition: max-height var(--speed), padding var(--speed);
+}
+
+.accordeon--active .accordeon__top-icon {
+  transform: rotate(180deg);
+}
+
+.accordeon--active .accordeon__body {
+  padding: 15px;
+  max-height: unset;
+}
