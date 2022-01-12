@@ -3,15 +3,26 @@
   border: 1px solid #ccc;
   position: relative;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   border-radius: 4px;
 }
 
 .accordion__top-icon {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
   transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   width: 24px;
   height: 24px;
   fill: #000;
@@ -24,10 +35,14 @@
   max-height: 0;
   will-change: max-height;
   overflow: hidden;
+  -webkit-transition: max-height var(--speed), padding var(--speed);
+  -o-transition: max-height var(--speed), padding var(--speed);
   transition: max-height var(--speed), padding var(--speed);
 }
 
 .accordion--active .accordion__top-icon {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
