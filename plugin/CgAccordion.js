@@ -12,10 +12,10 @@ class CgAccordion {
     this.$elements = document.querySelectorAll(selector);
     this.options = Object.assign(defaultOptions, options);
 
-    this.#clickHandler();
+    this.clickHandler();
   }
 
-  #clickHandler() {
+  clickHandler() {
     this.$elements.forEach(($element) => {
       $element.querySelector(`.${this.options.topClass}`).addEventListener('click', () => {
         if (this.isOpen($element)) {
